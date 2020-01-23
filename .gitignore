@@ -100,3 +100,6 @@ venv
 
 # pycache
 __pycache__
+
+# entirety of .idea
+.idea
