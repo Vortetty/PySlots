@@ -90,3 +90,13 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/pycharm# Created by .ignore support plugin (hsz.mobi)
+
+
+
+# Added by me
+
+# venv folder
+venv
+
+# pycache
+__pycache__
