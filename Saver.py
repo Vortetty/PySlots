@@ -1,13 +1,14 @@
-import json
+import shelve, pickle
 
-def save(name, data):
-    # now write output to a file
-    savefile = open(name+".PSLT-SAV", "w+")
-    savefile.write(json.dumps(data))
-    savefile.close()
+def save(name, money, rolls):
+    File = shelve.open(name + ".PSLT-SAV")
+    File["money"] = money
+    File["rolls"] = rolls
+    File.close()
 
 def load(name):
-    loadfile = open(name + ".PSLT-SAV", "r+")
-    data = json.load(loadfile)
-    loadfile.close()
-    return data
+    File = shelve.open(name + ".PSLT-SAV")
+    money = File["money"]
+    rolls = File["rolls"]
+    File.close()
+    return money,rolls
